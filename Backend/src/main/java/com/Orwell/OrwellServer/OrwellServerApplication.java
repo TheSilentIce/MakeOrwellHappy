@@ -8,7 +8,7 @@ public class OrwellServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OrwellServerApplication.class, args);
-		//TEST
+		//TEST1
 	}
 
 }
