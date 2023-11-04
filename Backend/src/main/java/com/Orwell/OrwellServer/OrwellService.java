@@ -20,4 +20,8 @@ public class OrwellService {
     public String getAIResponse(String passage) throws IOException {
         return connector.connect(jb.buildPassage(passage));
     }
+
+    public String calculateScores(String passage) throws IOException {
+        return connector.connect(jb.buildCalculation(passage));
+    }
 }
