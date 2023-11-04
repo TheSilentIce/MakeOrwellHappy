@@ -2,6 +2,7 @@ package com.Orwell.OrwellServer;
 
 import org.springframework.web.bind.annotation.*;
 
+import javax.imageio.IIOException;
 import java.io.IOException;
 
 @RestController
@@ -21,7 +22,7 @@ public class OrwellController {
      * Calls orwellService's getPrompt method and returns Ai's prompt
      * @return - returns prompt
      */
-    @GetMapping
+    @GetMapping("/getPrompt/")
     public String getPrompt() throws IOException {
         return orwellService.getPrompt();
     }
@@ -29,6 +30,11 @@ public class OrwellController {
     @PostMapping("/aiTurn/{passage}")
     public String aiTurn(@PathVariable String passage) throws IOException{
         return orwellService.getAIResponse(passage);
+    }
+
+    @PostMapping("/calculate/{passage}")
+    public String calculateScores(@PathVariable String passage) throws IOException {
+        return orwellService.calculateScores(passage);
     }
 
 }
