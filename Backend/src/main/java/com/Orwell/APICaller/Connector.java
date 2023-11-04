@@ -6,7 +6,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Connector {
-    private String connect(String json) throws IOException {
+    public String connect(String json) throws IOException {
         URL url = new URL("https://api.openai.com/v1/chat/completions");
         HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
         connection.setRequestProperty("Content-Type", "application/json");

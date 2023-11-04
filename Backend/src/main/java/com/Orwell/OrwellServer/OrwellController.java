@@ -1,8 +1,8 @@
 package com.Orwell.OrwellServer;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping(path = "v1/Orwell/")
@@ -22,8 +22,13 @@ public class OrwellController {
      * @return - returns prompt
      */
     @GetMapping
-    public String getPrompt() {
+    public String getPrompt() throws IOException {
         return orwellService.getPrompt();
+    }
+
+    @PostMapping("/aiTurn/{passage}")
+    public String aiTurn(@PathVariable String passage) throws IOException{
+        return orwellService.getAIResponse(passage);
     }
 
 }
