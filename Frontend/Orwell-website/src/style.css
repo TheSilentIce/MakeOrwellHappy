@@ -1,0 +1,41 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Source+San+Pro:wght@400;600;700%display=swap') */
+
+* {
+    margin: 0;    
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0e0e0e;
+}
+
+.text {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.text h2 {
+    position: relative;
+    color: #ffeb3b;
+    font-weight: 600;
+    font-size: 16em;
+    -webkit-box-reflect: below 1px;
+    text-shadow: 0 0 10px #ff8c3b,
+                0 0 40px #ff8c3b,
+                0 0 80px #ff8c3b,
+                0 0 160px #ff8c3b,
+                0 0 240px #ff8c3b;
+}
+
+.test {
+    box-shadow: 0 0 20px red;
+}
+
+
