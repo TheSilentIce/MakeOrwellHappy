@@ -5,7 +5,7 @@ import axios from "axios";
 
 function MainBody() {
   const [prompt, setPrompt] = useState<String | null>("HELLO");
-  const [passage, setPassage] = useState<String | null>("");
+  const [passage, setPassage] = useState<String>("");
 
   const promptCollect = async () => {
     const URL = "http://localhost:8080/v1/Orwell/getPrompt/";
@@ -16,7 +16,6 @@ function MainBody() {
           "Content-Type": "application/json",
         },
       });
-      console.log(promptResponse.data);
       return promptResponse.data;
     } catch (error) {
       console.log(error);
@@ -24,15 +23,18 @@ function MainBody() {
   };
 
   const getAiTurn = async () => {
-    const URL = "http://localhost:8080/v1/Orwell/aiTurn/" + passage;
+    let input = passage.split(" ").join("-");
+    const URL = "http://localhost:8080/v1/Orwell/aiTurn/" + input;
+    console.log("URL: " + URL);
 
     try {
-      const aiResponse = await axios.get(URL, {
+      const promptResponse = await axios.post(URL, {
         headers: {
           "Content-Type": "application/json",
         },
       });
-      return aiResponse.data;
+      console.log(promptResponse);
+      return promptResponse.data;
     } catch (error) {
       console.log(error);
     }
