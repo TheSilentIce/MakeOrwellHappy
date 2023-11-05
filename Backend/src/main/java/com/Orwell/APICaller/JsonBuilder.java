@@ -6,8 +6,8 @@ import com.google.gson.JsonParser;
 
 public class JsonBuilder {
     private final String model = "gpt-3.5-turbo";
-    private final String starterPrompt = "Generate a random but very creative 3 sentence passage. A user will add their own 3 sentences to it, so make sure one is able to add to it.";
-    private final String aiResponsePrompt = "Add three very creative and random sentences to this passage, then return the entire passage with the added three sentences. Order should be like \"original passage + new 3 sentences\" Passage:  ";
+    private final String starterPrompt = "Generate a random but very creative 3 sentence passage/prompt. Your response should only be 3 sentences long. ";
+    private final String aiResponsePrompt = "Add three very creative and random sentences to this passage, then return the entire passage with the added three sentences. Your response should be like this: \"original passage + the 3 new sentences\" Passage:  ";
     private final String calculatePrompt = "I want you to grade this passage as George Orwell would; you are going to grade it based on these four categories: Quality of metaphors, descriptive language, conciseness/efficiency, and creativity. Use these questions from Orwell's essay \"Politics and the English Language\" when grading each category: \n" +
             "1. What am I trying to say? \n" +
             "2. What words will express it? \n" +
@@ -59,6 +59,7 @@ public class JsonBuilder {
         messages[0] = userMessage;
 
         payload.add("messages", gson.toJsonTree(messages));
+        System.out.println(payload.toString());
         return payload.toString();
     }
 

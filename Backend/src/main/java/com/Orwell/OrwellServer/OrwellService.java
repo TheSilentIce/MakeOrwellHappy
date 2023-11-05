@@ -20,6 +20,7 @@ public class OrwellService {
 
     public String getAIResponse(String passage) throws IOException {
         String response = connector.connect(jb.buildPassage(passage));
+        System.out.println(jb.translateResponse(response));
         return jb.translateResponse(response);
     }
 

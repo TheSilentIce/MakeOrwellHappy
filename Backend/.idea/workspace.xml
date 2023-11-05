@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aef8a579-3d94-4d6b-a859-a94e242d3864" name="Changes" comment="Added method to JsonBuilder that converts response from chatgpt">
+    <list default="true" id="aef8a579-3d94-4d6b-a859-a94e242d3864" name="Changes" comment="Added method to JsonBuilder that translated ChatGPT's json response to a regular string.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/APICaller/APIKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/APICaller/APIKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/APICaller/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/APICaller/Connector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/APICaller/JsonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/APICaller/JsonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Orwell-website/src/Components/MainBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Orwell-website/src/Components/MainBody.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +68,26 @@
     "last_opened_file_path": "C:/Projects/Congressional-App-Challenge/Java/AI-Response"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="OrwellServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Orwell.OrwellServer.OrwellServerApplication" />
+      <module name="OrwellServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Orwell.OrwellServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OrwellServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -131,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699199965540</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added method to JsonBuilder that translated ChatGPT's json response to a regular string.">
+      <created>1699215958454</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699215958454</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -143,6 +172,7 @@
     <MESSAGE value="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback." />
     <MESSAGE value="Updated paths for getPrompt and added calculateScores method to Controller" />
     <MESSAGE value="Updated Controller to now allow Frontend to call Springboot methods. Previously blocked by CORS." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Controller to now allow Frontend to call Springboot methods. Previously blocked by CORS." />
+    <MESSAGE value="Added method to JsonBuilder that translated ChatGPT's json response to a regular string." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method to JsonBuilder that translated ChatGPT's json response to a regular string." />
   </component>
 </project>

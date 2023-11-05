@@ -31,6 +31,8 @@ public class OrwellController {
     @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/aiTurn/{passage}")
     public String aiTurn(@PathVariable String passage) throws IOException{
+        System.out.println("HELLO");
+        passage = String.join(" ", passage.split("-"));
         return orwellService.getAIResponse(passage);
     }
     @CrossOrigin(origins = "http://localhost:5173")
