@@ -4,8 +4,10 @@ import "../Styles/App.css";
 function App() {
   return (
     <>
-      <div>
-        <Particle></Particle>
+      <div className="container">
+        <div className="help">
+          <Particle></Particle>
+        </div>
       </div>
     </>
   );

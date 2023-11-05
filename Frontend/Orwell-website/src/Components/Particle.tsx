@@ -7,10 +7,7 @@ function Particle() {
         {/* <div className="text">
           <h2>Fire</h2>
         </div> */}
-
-        <div className="container">
-          <div className="particle"></div>
-        </div>
+        <div className="particle"></div>
       </div>
     </>
   );
