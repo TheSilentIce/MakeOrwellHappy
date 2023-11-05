@@ -5,8 +5,9 @@ import axios from "axios";
 
 function MainBody() {
   const [prompt, setPrompt] = useState<String | null>("HELLO");
+  const [passage, setPassage] = useState<String | null>("");
 
-  const getPrompt = async () => {
+  const promptCollect = async () => {
     const URL = "http://localhost:8080/v1/Orwell/getPrompt/";
 
     try {
@@ -21,18 +22,41 @@ function MainBody() {
     }
   };
 
-  const test = () => {
-    getPrompt().then((result) => {
-      setPrompt(result);
+  const getAiTurn = async () => {
+    const URL = "http://localhost:8080/v1/Orwell/aiTurn/" + passage;
+
+    try {
+      const aiResponse = await axios.get(URL, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      return aiResponse.data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getPrompt = () => {
+    promptCollect().then((prompt) => {
+      setPrompt(prompt);
+      setPassage(prompt);
+    });
+  };
+
+  const aiTurn = () => {
+    getAiTurn().then((passage) => {
+      setPassage(passage);
     });
   };
 
   return (
     <>
       <div>
-        <p>Hello</p>
-        <button onClick={test}>CLICK ME</button>
+        <button onClick={getPrompt}>GET PROMPT</button>
+        <button onClick={aiTurn}>AI TURN</button>
         <p className="prompt">{prompt}</p>
+        <p className="passage">{passage}</p>
       </div>
     </>
   );
