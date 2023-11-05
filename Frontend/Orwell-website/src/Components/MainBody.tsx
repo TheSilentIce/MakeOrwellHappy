@@ -1,25 +1,30 @@
+import { useState } from "react";
 import "../Styles/MainBody.css";
 import axios from "axios";
 //First box will be text, second will be filler, third will be textbox
 
 function MainBody() {
+  const [prompt, setPrompt] = useState<String | null>("HELLO");
+
   const getPrompt = async () => {
-    const URL = "https://localhost:8080/v1/Orwell/getPrompt";
+    const URL = "http://localhost:8080/v1/Orwell/getPrompt/";
 
     try {
-      const prompt = await axios.get(URL, {
+      const promptResponse = await axios.get(URL, {
         headers: {
           "Content-Type": "application/json",
         },
       });
-      return prompt;
+      return promptResponse.data;
     } catch (error) {
       console.log(error);
     }
   };
 
   const test = () => {
-    console.log(getPrompt());
+    getPrompt().then((result) => {
+      setPrompt(result);
+    });
   };
 
   return (
@@ -27,6 +32,7 @@ function MainBody() {
       <div>
         <p>Hello</p>
         <button onClick={test}>CLICK ME</button>
+        <p className="prompt">{prompt}</p>
       </div>
     </>
   );
