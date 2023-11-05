@@ -18,9 +18,18 @@ function MainBody() {
     }
   };
 
-  const test = () => {};
+  const test = () => {
+    console.log(getPrompt());
+  };
 
-  return <></>;
+  return (
+    <>
+      <div>
+        <p>Hello</p>
+        <button onClick={test}>CLICK ME</button>
+      </div>
+    </>
+  );
 }
 
 export default MainBody;

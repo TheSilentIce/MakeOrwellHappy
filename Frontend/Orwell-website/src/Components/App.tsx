@@ -1,5 +1,6 @@
 import Particle from "./Particle";
 import "../Styles/App.css";
+import MainBody from "./MainBody";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <div className="help">
           <Particle></Particle>
         </div>
+        <MainBody></MainBody>
       </div>
     </>
   );
