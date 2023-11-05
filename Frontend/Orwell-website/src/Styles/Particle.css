@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Source+San+Pro:wght@400;600;700%display=swap') */
-
 * {
     margin: 0;    
     padding: 0;
@@ -8,7 +6,9 @@
 }
 
 body {
-    display: flex;
+    display: grid;
+    grid-template-rows: 2fr 10fr 2fr;
+    grid-template-columns: 2fr 10fr 2fr;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -34,6 +34,18 @@ body {
                 0 0 240px #ff8c3b;
 }
 
+.particle {
+    height: 30px;
+    width: 30px;
+    background-color: #ffeb3b;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 10px #ff8c3b,
+                0 0 40px #ff8c3b,
+                0 0 80px #ff8c3b,
+                0 0 160px #ff8c3b,
+                0 0 240px #ff8c3b;
+}
 
 
 

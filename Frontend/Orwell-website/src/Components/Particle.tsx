@@ -4,11 +4,12 @@ function Particle() {
   return (
     <>
       <div>
-        <div className="text">
+        {/* <div className="text">
           <h2>Fire</h2>
-        </div>
+        </div> */}
+
+        <div className="particle"></div>
       </div>
-      {/* <div className="container"></div> */}
     </>
   );
 }
