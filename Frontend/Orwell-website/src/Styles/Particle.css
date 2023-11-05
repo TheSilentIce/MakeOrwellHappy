@@ -34,9 +34,28 @@ body {
                 0 0 240px #ff8c3b;
 }
 
+@keyframes example {
+    0% {background-color: #ffeb3b;}
+    10% {background-color: #ffeb3b;}
+    20% {background-color: #ffeb3b;}
+    30% {background-color: pink;}
+    40% {background-color: pink;}
+    50% {background-color: pink;}
+    60% {background-color: pink;}
+    70% {background-color: pink;}
+    80% {background-color: #ffeb3b;}
+    90% {background-color: #ffeb3b;}
+    100% {background-color: #ffeb3b;}
+}
+
+@keyframes travel {
+
+}
+
 .particle {
-    height: 30px;
-    width: 30px;
+    margin-left: 10px;
+    height: 2rem;
+    width: 2rem;
     background-color: #ffeb3b;
     border-radius: 50%;
     display: inline-block;
@@ -45,6 +64,10 @@ body {
                 0 0 80px #ff8c3b,
                 0 0 160px #ff8c3b,
                 0 0 240px #ff8c3b;
+
+    /* animation-name: example;
+    animation-duration: 5s; */
+    
 }
 
 
