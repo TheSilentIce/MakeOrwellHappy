@@ -9,6 +9,8 @@ import { Button } from "flowbite-react";
 function MainBody() {
   const [prompt, setPrompt] = useState<String | null>("HELLO");
   const [passage, setPassage] = useState<String>("");
+  const [isPrompt, setIsPrompt] = useState<boolean>(false);
+  const [isPassage, setIsPassage] = useState<boolean>(true);
 
   const promptCollect = async () => {
     const URL = "http://localhost:8080/v1/Orwell/getPrompt/";
@@ -56,15 +58,30 @@ function MainBody() {
     });
   };
 
+  const submitTextBox = () => {};
+
   return (
     <>
-      <div>
-        <Button onClick={getPrompt} gradientDuoTone={"greenToBlue"}>
+      <div className="main-container">
+        <div className="text-container">
+          <p className="prompt" hidden={isPrompt}>
+            {prompt}
+          </p>
+          <p className="passage" hidden={isPassage}>
+            {passage}
+          </p>
+        </div>
+
+        <div className="eye-container"></div>
+        <div className="input-container">
+          <input type="text" id="textbox"></input>
+          <Button onClick={submitTextBox}>Submit</Button>
+        </div>
+
+        {/* <Button onClick={getPrompt} gradientDuoTone={"greenToBlue"}>
           GET PROMPT
         </Button>
-        <Button onClick={aiTurn}>AI TURN</Button>
-        <p className="prompt">{prompt}</p>
-        <p className="passage">{passage}</p>
+        <Button onClick={aiTurn}>AI TURN</Button> */}
       </div>
     </>
   );

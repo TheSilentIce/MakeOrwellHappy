@@ -1,7 +1,35 @@
+@import url("../Styles/App.css");
+
 .prompt {
     color: white;
+    font-size: 18px;
+    font-weight:500;
 }
 
 .passage {
     color: violet;
+    font-size: 18px;
+    font-weight:500;
+}
+
+.main-container {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye-container {
+    background-color: rebeccapurple;
+}
+
+.input-container {
+    background-color: lightblue;
 }

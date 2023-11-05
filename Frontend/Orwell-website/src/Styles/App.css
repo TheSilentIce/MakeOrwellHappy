@@ -13,5 +13,5 @@ html,body{
 .help {
     display: grid;
     grid-row: span 3;
-    background-color: red;
+    /* background-color: red; */
 }
