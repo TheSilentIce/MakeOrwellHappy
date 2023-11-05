@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aef8a579-3d94-4d6b-a859-a94e242d3864" name="Changes" comment="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback.">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/Orwell/OrwellServer/OrwellServerApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Orwell/OrwellServer/OrwellServerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Orwell/OrwellServer/OrwellServerApplication.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2XjJYbiIwsRQSVvAiRPr3BgbVzM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Projects/Orwell-GIT"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aef8a579-3d94-4d6b-a859-a94e242d3864" name="Changes" comment="" />
+      <created>1699136603892</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699136603892</updated>
+    </task>
+    <task id="LOCAL-00001" summary="test1">
+      <created>1699136691506</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699136691506</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Made Controller and Service classes">
+      <created>1699138337951</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699138337951</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Setting up the rest of the classes and importing GSON">
+      <created>1699139362866</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699139362866</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Finished JsonBuilder and Connector class, although Connector class may need some updating.">
+      <created>1699140778052</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699140778052</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Finished the AI response element, created methods for controller,service,and json builder">
+      <created>1699141360855</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699141360855</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback.">
+      <created>1699141995181</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699141995181</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test1" />
+    <MESSAGE value="Made Controller and Service classes" />
+    <MESSAGE value="Setting up the rest of the classes and importing GSON" />
+    <MESSAGE value="Finished JsonBuilder and Connector class, although Connector class may need some updating." />
+    <MESSAGE value="Finished the AI response element, created methods for controller,service,and json builder" />
+    <MESSAGE value="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback." />
+  </component>
+</project>
