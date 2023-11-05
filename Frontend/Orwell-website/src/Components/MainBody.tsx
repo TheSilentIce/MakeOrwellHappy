@@ -7,10 +7,11 @@ import { Button } from "flowbite-react";
 //First box will be text, second will be filler, third will be textbox
 
 function MainBody() {
-  const [prompt, setPrompt] = useState<String | null>("HELLO");
+  const [prompt, setPrompt] = useState<String>("HELLO");
   const [passage, setPassage] = useState<String>("");
   const [isPrompt, setIsPrompt] = useState<boolean>(false);
   const [isPassage, setIsPassage] = useState<boolean>(true);
+  const [userInput, setUserInput] = useState<String>("");
 
   const promptCollect = async () => {
     const URL = "http://localhost:8080/v1/Orwell/getPrompt/";
@@ -58,7 +59,16 @@ function MainBody() {
     });
   };
 
-  const submitTextBox = () => {};
+  const submitTextBox = () => {
+    getAiTurn().then((passage) => {
+      setIsPrompt(true);
+      setIsPassage(false);
+    });
+  };
+
+  const textInput = (val: any) => {
+    setUserInput(val.target.value);
+  };
 
   return (
     <>
@@ -67,6 +77,7 @@ function MainBody() {
           <p className="prompt" hidden={isPrompt}>
             {prompt}
           </p>
+          <p className="passage">{userInput}</p>
           <p className="passage" hidden={isPassage}>
             {passage}
           </p>
@@ -74,8 +85,10 @@ function MainBody() {
 
         <div className="eye-container"></div>
         <div className="input-container">
-          <input type="text" id="textbox"></input>
-          <Button onClick={submitTextBox}>Submit</Button>
+          <textarea onChange={textInput}></textarea>
+          <Button onClick={submitTextBox} gradientDuoTone={"purpleToPink"}>
+            Submit
+          </Button>
         </div>
 
         {/* <Button onClick={getPrompt} gradientDuoTone={"greenToBlue"}>
