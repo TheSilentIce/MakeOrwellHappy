@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aef8a579-3d94-4d6b-a859-a94e242d3864" name="Changes" comment="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback.">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/Orwell/OrwellServer/OrwellServerApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellController.java" afterDir="false" />
+    <list default="true" id="aef8a579-3d94-4d6b-a859-a94e242d3864" name="Changes" comment="Updated paths for getPrompt and added calculateScores method to Controller">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Orwell/OrwellServer/OrwellServerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Orwell/OrwellServer/OrwellServerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Orwell-website/src/Components/MainBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Orwell-website/src/Components/MainBody.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +45,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Projects/Orwell-GIT"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projects/Orwell-GIT&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -104,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699141995181</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated paths for getPrompt and added calculateScores method to Controller">
+      <created>1699142272509</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699142272509</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -114,6 +120,7 @@
     <MESSAGE value="Finished JsonBuilder and Connector class, although Connector class may need some updating." />
     <MESSAGE value="Finished the AI response element, created methods for controller,service,and json builder" />
     <MESSAGE value="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback." />
+    <MESSAGE value="Updated paths for getPrompt and added calculateScores method to Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated paths for getPrompt and added calculateScores method to Controller" />
   </component>
 </project>

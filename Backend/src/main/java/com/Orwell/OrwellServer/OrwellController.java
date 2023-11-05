@@ -22,16 +22,18 @@ public class OrwellController {
      * Calls orwellService's getPrompt method and returns Ai's prompt
      * @return - returns prompt
      */
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/getPrompt/")
     public String getPrompt() throws IOException {
         return orwellService.getPrompt();
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/aiTurn/{passage}")
     public String aiTurn(@PathVariable String passage) throws IOException{
         return orwellService.getAIResponse(passage);
     }
-
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/calculate/{passage}")
     public String calculateScores(@PathVariable String passage) throws IOException {
         return orwellService.calculateScores(passage);
