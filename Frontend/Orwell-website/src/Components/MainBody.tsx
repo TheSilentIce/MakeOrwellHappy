@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "../Styles/MainBody.css";
 import axios from "axios";
+import "../Styles/TailwindFile.css";
+import { Button } from "flowbite-react";
+
 //First box will be text, second will be filler, third will be textbox
 
 function MainBody() {
@@ -56,8 +59,10 @@ function MainBody() {
   return (
     <>
       <div>
-        <button onClick={getPrompt}>GET PROMPT</button>
-        <button onClick={aiTurn}>AI TURN</button>
+        <Button onClick={getPrompt} gradientDuoTone={"greenToBlue"}>
+          GET PROMPT
+        </Button>
+        <Button onClick={aiTurn}>AI TURN</Button>
         <p className="prompt">{prompt}</p>
         <p className="passage">{passage}</p>
       </div>
