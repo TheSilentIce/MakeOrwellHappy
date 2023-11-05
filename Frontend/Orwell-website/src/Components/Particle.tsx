@@ -8,7 +8,9 @@ function Particle() {
           <h2>Fire</h2>
         </div> */}
 
-        <div className="particle"></div>
+        <div className="container">
+          <div className="particle"></div>
+        </div>
       </div>
     </>
   );
