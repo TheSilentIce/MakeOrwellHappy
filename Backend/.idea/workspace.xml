@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aef8a579-3d94-4d6b-a859-a94e242d3864" name="Changes" comment="Updated paths for getPrompt and added calculateScores method to Controller">
+    <list default="true" id="aef8a579-3d94-4d6b-a859-a94e242d3864" name="Changes" comment="Added method to JsonBuilder that converts response from chatgpt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Orwell/OrwellServer/OrwellServerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Orwell/OrwellServer/OrwellServerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/APICaller/JsonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/APICaller/JsonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Orwell/OrwellServer/OrwellService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Orwell-website/src/Components/MainBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Orwell-website/src/Components/MainBody.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +24,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8b7ebfc4-17b2-4a60-ace0-de15031e0040" />
+        <option name="url" value="https://github.com/TheSilentIce/MakeOrwellHappy.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,13 +59,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projects/Orwell-GIT&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Projects/Congressional-App-Challenge/Java/AI-Response"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -110,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699142272509</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated Controller to now allow Frontend to call Springboot methods. Previously blocked by CORS.">
+      <created>1699199965540</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699199965540</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,6 +142,7 @@
     <MESSAGE value="Finished the AI response element, created methods for controller,service,and json builder" />
     <MESSAGE value="Created methods where AI grades final passage then returns the final scores for categories as well as any feedback." />
     <MESSAGE value="Updated paths for getPrompt and added calculateScores method to Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated paths for getPrompt and added calculateScores method to Controller" />
+    <MESSAGE value="Updated Controller to now allow Frontend to call Springboot methods. Previously blocked by CORS." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Controller to now allow Frontend to call Springboot methods. Previously blocked by CORS." />
   </component>
 </project>

@@ -16,6 +16,7 @@ function MainBody() {
           "Content-Type": "application/json",
         },
       });
+      console.log(promptResponse.data);
       return promptResponse.data;
     } catch (error) {
       console.log(error);
@@ -38,9 +39,9 @@ function MainBody() {
   };
 
   const getPrompt = () => {
-    promptCollect().then((prompt) => {
-      setPrompt(prompt);
-      setPassage(prompt);
+    promptCollect().then((prompt1) => {
+      setPrompt(prompt1);
+      setPassage(prompt1);
     });
   };
 

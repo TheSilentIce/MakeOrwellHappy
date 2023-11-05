@@ -2,6 +2,7 @@ package com.Orwell.APICaller;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 public class JsonBuilder {
     private final String model = "gpt-3.5-turbo";
@@ -93,5 +94,11 @@ public class JsonBuilder {
 
         payload.add("messages",gson.toJsonTree(messages));
         return payload.toString();
+    }
+
+    public String translateResponse(String json) {
+        JsonObject jsonObject = JsonParser.parseString(json).getAsJsonObject();
+        String x = jsonObject.getAsJsonArray("choices").get(0).getAsJsonObject().getAsJsonObject("message").get("content").getAsString();
+        return x;
     }
 }

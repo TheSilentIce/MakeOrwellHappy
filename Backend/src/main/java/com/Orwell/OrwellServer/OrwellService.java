@@ -14,14 +14,17 @@ public class OrwellService {
     public OrwellService(){}
 
     public String getPrompt() throws IOException {
-        return connector.connect(jb.buildPrompt());
+        String response = connector.connect(jb.buildPrompt());
+        return jb.translateResponse(response);
     }
 
     public String getAIResponse(String passage) throws IOException {
-        return connector.connect(jb.buildPassage(passage));
+        String response = connector.connect(jb.buildPassage(passage));
+        return jb.translateResponse(response);
     }
 
     public String calculateScores(String passage) throws IOException {
-        return connector.connect(jb.buildCalculation(passage));
+        String response = connector.connect(jb.buildCalculation(passage));
+        return jb.translateResponse(response);
     }
 }
