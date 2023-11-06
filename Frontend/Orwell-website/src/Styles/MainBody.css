@@ -77,5 +77,6 @@ textarea {
 }
 
 .summary-text {
+    font-size: 25px;
     color: darkgreen;
 }
