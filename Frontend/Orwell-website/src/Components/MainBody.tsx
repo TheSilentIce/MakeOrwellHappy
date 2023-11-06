@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import "../Styles/MainBody.css";
 import axios from "axios";
 import "../Styles/TailwindFile.css";
@@ -7,7 +8,7 @@ import { Button } from "flowbite-react";
 //First box will be text, second will be filler, third will be textbox
 
 function MainBody() {
-  const [prompt, setPrompt] = useState<String>("HELLO");
+  const [prompt, setPrompt] = useState<String>("Loading Prompt...");
   const [passage, setPassage] = useState<String>("");
   const [isPrompt, setIsPrompt] = useState<boolean>(false);
   const [isPassage, setIsPassage] = useState<boolean>(true);
@@ -53,11 +54,11 @@ function MainBody() {
     });
   };
 
-  const aiTurn = () => {
-    getAiTurn().then((passage) => {
-      setPassage(passage);
-    });
-  };
+  //   const aiTurn = () => {
+  //     getAiTurn().then((passage) => {
+  //       setPassage(passage);
+  //     });
+  //   };
 
   const submitTextBox = () => {
     getAiTurn().then((passage) => {
@@ -69,6 +70,16 @@ function MainBody() {
   const textInput = (val: any) => {
     setUserInput(val.target.value);
   };
+
+  let oneTime: boolean = true;
+
+  useEffect(() => {
+    if (oneTime) {
+      getPrompt();
+      console.log("RUN");
+      oneTime = false;
+    }
+  }, []);
 
   return (
     <>
