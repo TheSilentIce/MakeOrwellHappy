@@ -4,9 +4,6 @@ function Particle() {
   return (
     <>
       <div>
-        {/* <div className="text">
-          <h2>Fire</h2>
-        </div> */}
         <div className="particle"></div>
       </div>
     </>

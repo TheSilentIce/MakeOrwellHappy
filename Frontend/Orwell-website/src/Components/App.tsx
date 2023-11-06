@@ -6,10 +6,25 @@ function App() {
   return (
     <>
       <div className="container">
-        <div className="help">
+        <div className="column1">
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
           <Particle></Particle>
         </div>
         <MainBody></MainBody>
+        <div className="column3">
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
+          <Particle></Particle>
+        </div>
       </div>
     </>
   );

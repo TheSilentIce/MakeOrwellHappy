@@ -1,42 +1,18 @@
-.text {
-    position: relative;
-    width: 100%;
-    text-align: center;
-}
 
-.text h2 {
-    position: relative;
-    color: #ffeb3b;
-    font-weight: 600;
-    font-size: 16em;
-    -webkit-box-reflect: below 1px;
-    text-shadow: 0 0 10px #ff8c3b,
-                0 0 40px #ff8c3b,
-                0 0 80px #ff8c3b,
-                0 0 160px #ff8c3b,
-                0 0 240px #ff8c3b;
-}
-
-@keyframes example {
-    0% {background-color: #ffeb3b;}
-    10% {background-color: #ffeb3b;}
-    20% {background-color: #ffeb3b;}
-    30% {background-color: pink;}
-    40% {background-color: pink;}
-    50% {background-color: pink;}
-    60% {background-color: pink;}
+@keyframes changeColor {
+    0% {background-color: violet;}
+    10% {background-color: green;}
+    20% {background-color: red;}
+    30% {background-color: white;}
+    40% {background-color: purple;}
+    50% {background-color: yellow;}
+    60% {background-color: lightcoral;}
     70% {background-color: pink;}
-    80% {background-color: #ffeb3b;}
-    90% {background-color: #ffeb3b;}
+    80% {background-color: blue;}
+    90% {background-color: indigo;}
     100% {background-color: #ffeb3b;}
 }
 
-@keyframes travel {
-    25% {bottom: 20px;}
-    50% {bottom: 20px;}
-    75% {bottom:20px}
-    100% {bottom: 20px;}
-}
 
 .container {
     grid-column: span 1;
@@ -55,12 +31,8 @@
                 0 0 80px #ff8c3b,
                 0 0 160px #ff8c3b,
                 0 0 240px #ff8c3b;
-
-    animation-name: travel;
-    animation-duration: 10s;
-    /* animation-name: example;
-    animation-duration: 5s; */
-
+    position: relative;
+    animation: changeColor 5s infinite;
 }
 
 

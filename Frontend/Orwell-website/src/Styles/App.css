@@ -10,8 +10,12 @@ html,body{
     grid-template-rows: 1fr 10fr 1fr;
 }
 
-.help {
+.column1 {
     display: grid;
     grid-row: span 3;
-    /* background-color: red; */
+}
+
+.column3 {
+    display: grid;
+    grid-row: span 3;
 }

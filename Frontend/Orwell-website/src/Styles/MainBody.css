@@ -40,7 +40,6 @@ textarea {
     text-align: center;
 }
 
-/* Inspired by Online Projects */
 .eye-container p {
     position: relative;
     color: #FFEB0B;
@@ -59,7 +58,6 @@ textarea {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    /* background-color: lightblue; */
 }
 
 
