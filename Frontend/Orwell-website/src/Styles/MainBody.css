@@ -17,13 +17,15 @@
     grid-column: 2;
     grid-row: 2;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 5fr 2fr;
+    grid-template-rows: 100px 10fr 100px;
 }
 
 .text-container {
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .eye-container {
@@ -36,4 +38,9 @@
     justify-content: center;
     gap: 30px;
     /* background-color: lightblue; */
+}
+
+textarea {
+    resize: none;
+    overflow: hidden; 
 }

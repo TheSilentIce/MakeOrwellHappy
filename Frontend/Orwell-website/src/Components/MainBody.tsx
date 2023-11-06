@@ -8,11 +8,12 @@ import { Button } from "flowbite-react";
 //First box will be text, second will be filler, third will be textbox
 
 function MainBody() {
-  const [prompt, setPrompt] = useState<String>("Loading Prompt...");
   const [passage, setPassage] = useState<String>("");
-  const [isPrompt, setIsPrompt] = useState<boolean>(false);
-  const [isPassage, setIsPassage] = useState<boolean>(true);
-  const [userInput, setUserInput] = useState<String>("");
+  let [beginning, setBeginning] = useState<String>("Loading Prompt...");
+  const [counter, setCounter] = useState<number>(0);
+  const [userInput, setUserInput] = useState<String[]>([]);
+  const [mainPage, setMainPage] = useState<boolean>(true);
+  const [summaryPage, setSummaryPage] = useState<boolean>(false);
 
   const promptCollect = async () => {
     const URL = "http://localhost:8080/v1/Orwell/getPrompt/";
@@ -30,7 +31,10 @@ function MainBody() {
   };
 
   const getAiTurn = async () => {
-    let input = passage.split(" ").join("-");
+    userInput.push(passage);
+    setUserInput(userInput);
+    beginning = beginning + " " + passage;
+    let input: String = beginning.split(" ").join("-");
     const URL = "http://localhost:8080/v1/Orwell/aiTurn/" + input;
     console.log("URL: " + URL);
 
@@ -49,26 +53,21 @@ function MainBody() {
 
   const getPrompt = () => {
     promptCollect().then((prompt1) => {
-      setPrompt(prompt1);
-      setPassage(prompt1);
+      setBeginning(prompt1);
     });
   };
 
-  //   const aiTurn = () => {
-  //     getAiTurn().then((passage) => {
-  //       setPassage(passage);
-  //     });
-  //   };
-
   const submitTextBox = () => {
     getAiTurn().then((passage) => {
-      setIsPrompt(true);
-      setIsPassage(false);
+      setCounter(counter + 1);
+      let newBeginning = beginning + passage;
+      setBeginning(newBeginning);
+      setPassage("");
     });
   };
 
   const textInput = (val: any) => {
-    setUserInput(val.target.value);
+    setPassage(val.target.value);
   };
 
   let oneTime: boolean = true;
@@ -83,30 +82,22 @@ function MainBody() {
 
   return (
     <>
-      <div className="main-container">
-        <div className="text-container">
-          <p className="prompt" hidden={isPrompt}>
-            {prompt}
-          </p>
-          <p className="passage">{userInput}</p>
-          <p className="passage" hidden={isPassage}>
-            {passage}
-          </p>
-        </div>
+      {true && (
+        <div className="main-container">
+          <div className="text-container">
+            <p className="prompt">{beginning}</p>
+            <p className="passage">{passage}</p>
+          </div>
 
-        <div className="eye-container"></div>
-        <div className="input-container">
-          <textarea onChange={textInput}></textarea>
-          <Button onClick={submitTextBox} gradientDuoTone={"purpleToPink"}>
-            Submit
-          </Button>
+          <div className="eye-container"></div>
+          <div className="input-container">
+            <textarea onChange={textInput}></textarea>
+            <Button onClick={submitTextBox} gradientDuoTone={"purpleToPink"}>
+              Submit
+            </Button>
+          </div>
         </div>
-
-        {/* <Button onClick={getPrompt} gradientDuoTone={"greenToBlue"}>
-          GET PROMPT
-        </Button>
-        <Button onClick={aiTurn}>AI TURN</Button> */}
-      </div>
+      )}
     </>
   );
 }
