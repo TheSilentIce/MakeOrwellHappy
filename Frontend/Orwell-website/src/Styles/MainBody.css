@@ -1,5 +1,11 @@
 @import url("../Styles/App.css");
 
+textarea {
+    resize: none;
+    overflow: hidden; 
+}
+
+
 .prompt {
     color: white;
     font-size: 18px;
@@ -40,7 +46,22 @@
     /* background-color: lightblue; */
 }
 
-textarea {
-    resize: none;
-    overflow: hidden; 
+
+.summary-page {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 10fr 100px;
+}
+
+.summary-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.summary-text {
+    color: darkgreen;
 }
