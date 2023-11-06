@@ -5,12 +5,10 @@ import axios from "axios";
 import "../Styles/TailwindFile.css";
 import { Button } from "flowbite-react";
 
-//First box will be text, second will be filler, third will be textbox
-
 function MainBody() {
   const [passage, setPassage] = useState<String>("");
   let [beginning, setBeginning] = useState<String>("Loading Prompt...");
-  const [counter, setCounter] = useState<number>(0);
+  const [counter, setCounter] = useState<number>(2);
   const [userInput, setUserInput] = useState<String[]>([]);
   const [mainPage, setMainPage] = useState<boolean>(true);
   const [summaryPage, setSummaryPage] = useState<boolean>(false);
@@ -81,7 +79,7 @@ function MainBody() {
 
   const submitTextBox = () => {
     getAiTurn().then((passage) => {
-      if (counter + 1 == 1) {
+      if (counter + 1 == 4) {
         setMainPage(false);
         setSummaryPage(true);
         calculateScores().then((summary) => {
@@ -91,7 +89,7 @@ function MainBody() {
         setCounter(counter + 1);
       }
 
-      let newBeginning = beginning + passage;
+      let newBeginning = beginning + " " + passage;
       setBeginning(newBeginning);
       setPassage("");
     });
@@ -120,9 +118,11 @@ function MainBody() {
             <p className="passage">{passage}</p>
           </div>
 
-          <div className="eye-container"></div>
+          <div className="eye-container">
+            <p>Orwell</p>
+          </div>
           <div className="input-container">
-            <textarea onChange={textInput}></textarea>
+            <textarea onChange={textInput} rows={4} cols={47}></textarea>
             <Button onClick={submitTextBox} gradientDuoTone={"purpleToPink"}>
               Submit
             </Button>

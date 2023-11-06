@@ -35,7 +35,23 @@ textarea {
 }
 
 .eye-container {
-    /* background-color: rebeccapurple; */
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+/* Inspired by Online Projects */
+.eye-container p {
+    position: relative;
+    color: #FFEB0B;
+    font-weight: 600;
+    font-size: 11em;
+    -webkit-box-reflect: below 1px;
+    text-shadow: 0 0 10px #ff8c3b,
+                0 0 40px #ff8c3b,
+                0 0 80px #ff8c3b,
+                0 0 160px #ff8c3b,
+                0 0 240px #ff8c3b;
 }
 
 .input-container {
